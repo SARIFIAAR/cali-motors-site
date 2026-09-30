@@ -25,8 +25,8 @@
   nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
       padding:14px 28px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .brand{display:flex;align-items:center;gap:12px}
-  .brand img{width:42px;height:42px;object-fit:contain}
-  .brand .name{font-family:'Anton';letter-spacing:.14em;font-size:15px}
+  .brand img{width:58px;height:58px;object-fit:contain}
+  .brand .name{font-family:'Anton';letter-spacing:.14em;font-size:22px}
   nav .ig{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
   /* HERO (split, clean white) */
@@ -78,6 +78,14 @@
     letter-spacing:.16em;text-transform:uppercase;color:#fff;
     background:linear-gradient(0deg,rgba(0,0,0,.82),rgba(0,0,0,0))}
   .loctile figcaption span{color:#67e0d6}
+  .loccard{border-radius:16px;overflow:hidden;background:var(--panel);border:1px solid var(--line);box-shadow:0 16px 38px rgba(0,0,0,.10)}
+  .loccard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform .6s ease}
+  .loccard:hover img{transform:scale(1.04)}
+  .cardbody{padding:20px 22px 24px}
+  .cardbody .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--turq);margin-bottom:6px}
+  .cardbody h4{font-family:'Anton';font-size:20px;letter-spacing:.04em;color:var(--ink);margin-bottom:6px}
+  .cardbody h4 span{color:var(--brass)}
+  .cardbody p{font-size:14px;color:var(--muted)}
   .reserve-cta{text-align:center;max-width:720px;margin:84px auto 0}
   @media(max-width:820px){.locgrid{grid-template-columns:1fr}.split{grid-template-columns:1fr;gap:28px}}
 
@@ -129,29 +137,16 @@
 <section id="dubai">
   <div class="wrap">
     <div class="eyebrow">Made for the real Dubai</div>
-    <h2 class="h2 block">Five places. One feeling.</h2>
-    <p class="muted">Our world isn't camels-and-skyline. It's the Dubai locals love — street culture, art,
-      heritage, sea and sand.</p>
-    <div class="pillars">
-      <div class="pill"><div class="k">Street</div><h4>Satwa</h4><p>Hand-painted-sign cool, craft and community.</p></div>
-      <div class="pill"><div class="k">Art</div><h4>Alserkal</h4><p>Design-forward, gallery-clean, artist collabs.</p></div>
-      <div class="pill"><div class="k">Heritage</div><h4>Gold Souk</h4><p>Brass, gold, old-Deira craft luxury.</p></div>
-      <div class="pill"><div class="k">Escape</div><h4>The Desert</h4><p>Dunes, golden hour, the weekend run.</p></div>
-      <div class="pill"><div class="k">Weekend</div><h4>Kite Beach</h4><p>Sea, sun, SALT — everyday-cool.</p></div>
-    </div>
-  </div>
-
-  <div class="wrap" style="margin-top:88px">
-    <div class="eyebrow">First Look</div>
     <h2 class="h2 block">One car. Every Dubai.</h2>
-    <p class="muted">From Satwa to the sand — the Jumeirah 1 in the city's real corners, in every colour.</p>
+    <p class="muted">Our world isn't camels-and-skyline — it's the Dubai locals love: street culture, art,
+      heritage, sea and sand. One car, every corner of the city, in every colour.</p>
     <div class="locgrid">
-      <figure class="loctile"><img src="assets/loc-satwa.png" alt="Jumeirah 1 on Satwa Street"><figcaption>Satwa Street &middot; <span>Sand</span></figcaption></figure>
-      <figure class="loctile"><img src="assets/loc-alserkal.png" alt="Jumeirah 1 at Alserkal Avenue"><figcaption>Alserkal Avenue &middot; <span>Turquoise</span></figcaption></figure>
-      <figure class="loctile"><img src="assets/loc-souk.png" alt="Jumeirah 1 at the old souk"><figcaption>Old Souk &middot; <span>Olive</span></figcaption></figure>
-      <figure class="loctile"><img src="assets/loc-kitebeach.png" alt="Jumeirah 1 at Kite Beach"><figcaption>Kite Beach &middot; <span>Blue</span></figcaption></figure>
-      <figure class="loctile"><img src="assets/loc-desert.png" alt="Jumeirah 1 in the Dubai desert"><figcaption>Dubai Desert &middot; <span>Pearl White</span></figcaption></figure>
-      <figure class="loctile"><img src="assets/loc-mosque.png" alt="Jumeirah 1 at the Jumeirah mosque"><figcaption>Jumeirah Mosque &middot; <span>Coral Red</span></figcaption></figure>
+      <figure class="loccard"><img src="assets/loc-satwa.png" alt="Jumeirah 1 on Satwa Street"><div class="cardbody"><div class="k">Street</div><h4>Satwa Street <span>&middot; Sand</span></h4><p>Hand-painted-sign cool, craft and community.</p></div></figure>
+      <figure class="loccard"><img src="assets/loc-alserkal.png" alt="Jumeirah 1 at Alserkal Avenue"><div class="cardbody"><div class="k">Art</div><h4>Alserkal Avenue <span>&middot; Turquoise</span></h4><p>Design-forward, gallery-clean, artist collabs.</p></div></figure>
+      <figure class="loccard"><img src="assets/loc-souk.png" alt="Jumeirah 1 at the old souk"><div class="cardbody"><div class="k">Heritage</div><h4>Old Souk <span>&middot; Olive</span></h4><p>Brass, gold, old-Deira craft luxury.</p></div></figure>
+      <figure class="loccard"><img src="assets/loc-kitebeach.png" alt="Jumeirah 1 at Kite Beach"><div class="cardbody"><div class="k">Weekend</div><h4>Kite Beach <span>&middot; Blue</span></h4><p>Sea, sun, SALT — everyday-cool.</p></div></figure>
+      <figure class="loccard"><img src="assets/loc-desert.png" alt="Jumeirah 1 in the Dubai desert"><div class="cardbody"><div class="k">Escape</div><h4>Dubai Desert <span>&middot; Pearl White</span></h4><p>Dunes, golden hour, the weekend run.</p></div></figure>
+      <figure class="loccard"><img src="assets/loc-mosque.png" alt="Jumeirah 1 at the Jumeirah mosque"><div class="cardbody"><div class="k">Icon</div><h4>Jumeirah Mosque <span>&middot; Coral Red</span></h4><p>Sandstone domes, golden light, timeless.</p></div></figure>
     </div>
 
     <div class="reserve-cta">
