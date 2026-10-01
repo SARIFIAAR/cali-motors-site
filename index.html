@@ -8,39 +8,40 @@
 <link rel="icon" type="image/svg+xml" href="assets/emblem.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Chivo:ital,wght@0,400;0,700;0,900;1,400&family=Chivo+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --panel:#f6f2ea; --ink:#1b1917; --muted:#6b6459;
-    --sand:#c2a878; --brass:#b0812f; --turq:#0f8b83; --line:rgba(27,25,23,.12);
+    --sand:#c2a878; --brass:#a6761f; --brass-ink:#7e5a10; --turq:#0f8b83; --line:rgba(27,25,23,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Zen Kaku Gothic New','Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{font-family:'Chivo',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
   a{color:inherit;text-decoration:none}
-  .block{font-family:'Chivo',sans-serif;font-weight:900;letter-spacing:.005em;text-transform:uppercase;line-height:1.0}
+  .block{font-family:'League Gothic','Chivo',sans-serif;font-weight:400;letter-spacing:.015em;text-transform:uppercase;line-height:.96}
   .script{font-family:'Kaushan Script',cursive}
 
   /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
       padding:10px 28px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .brand{display:flex;align-items:center;gap:16px}
-  .brand img{width:150px;height:150px;object-fit:contain}
-  .brand .name{font-family:'Chivo',sans-serif;font-weight:900;letter-spacing:.06em;font-size:30px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .nav-emblem{width:46px;height:46px;object-fit:contain}
+  .nav-wordmark{height:42px;width:auto;object-fit:contain}
+  @media(max-width:640px){.nav-wordmark{display:none}}
   nav .ig{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
   /* HERO (split, clean white) */
   header.hero{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr}
   .hero-copy{background:var(--bg);display:flex;flex-direction:column;justify-content:center;
-    padding:180px clamp(28px,5vw,80px) 48px}
+    padding:120px clamp(28px,5vw,80px) 48px}
   .hero-visual{background:var(--panel) url('assets/salt.png') center/cover no-repeat;min-height:46vh}
-  .tag{display:inline-block;align-self:flex-start;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--turq);
-    border:1px solid var(--turq);border-radius:100px;padding:7px 16px;margin-bottom:20px}
+  .tag{display:inline-block;align-self:flex-start;font-family:'Chivo Mono',monospace;font-size:12px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--turq);border:1px solid var(--turq);border-radius:100px;padding:7px 16px;margin-bottom:20px}
   .hero h1{font-size:clamp(42px,6vw,88px);color:var(--ink)}
-  .hero h1 .sm{display:block;font-size:clamp(13px,1.8vw,19px);letter-spacing:.34em;color:var(--brass);margin-bottom:8px}
+  .hero h1 .sm{display:block;font-family:'Chivo Mono',monospace;font-size:clamp(12px,1.4vw,15px);letter-spacing:.26em;color:var(--brass-ink);margin-bottom:10px}
   .hero .tagline{margin:16px 0 28px;font-size:clamp(16px,2vw,20px);color:var(--muted)}
-  .hero .tagline b{color:var(--brass);font-weight:700}
+  .hero .tagline b{color:var(--brass-ink);font-weight:700}
   @media(max-width:860px){header.hero{grid-template-columns:1fr}
     .hero-visual{order:-1;min-height:56vh}.hero-copy{padding:40px 28px 52px}}
 
@@ -51,13 +52,13 @@
   form.notify input::placeholder{color:#9a9186}
   form.notify input:focus{outline:none;border-color:var(--brass)}
   .btn{background:var(--brass);color:#fff;border:none;padding:15px 26px;border-radius:12px;cursor:pointer;
-    font-family:'Anton';letter-spacing:.1em;text-transform:uppercase;font-size:15px;transition:transform .15s,background .2s}
+    font-family:'Chivo',sans-serif;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:15px;transition:transform .15s,background .2s}
   .btn:hover{transform:translateY(-2px);background:#c8942f}
   .ok{color:var(--turq);font-size:14px;margin-top:10px;display:none;width:100%}
 
   /* SECTIONS */
   section{padding:92px 0;border-top:1px solid var(--line)}
-  .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+  .eyebrow{font-family:'Chivo Mono',monospace;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass-ink);margin-bottom:14px}
   .h2{font-size:clamp(30px,5vw,56px);margin-bottom:16px;color:var(--ink)}
   .muted{color:var(--muted);max-width:620px}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
@@ -78,14 +79,14 @@
   .loctile figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 22px 18px;font-size:14px;
     letter-spacing:.16em;text-transform:uppercase;color:#fff;
     background:linear-gradient(0deg,rgba(0,0,0,.82),rgba(0,0,0,0))}
-  .loctile figcaption span{color:#67e0d6}
+  .loctile figcaption span{color:var(--turq)}
   .loccard{border-radius:16px;overflow:hidden;background:var(--panel);border:1px solid var(--line);box-shadow:0 16px 38px rgba(0,0,0,.10)}
   .loccard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform .6s ease}
   .loccard:hover img{transform:scale(1.04)}
   .cardbody{padding:20px 22px 24px}
-  .cardbody .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--turq);margin-bottom:6px}
+  .cardbody .k{font-family:'Chivo Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--turq);margin-bottom:6px}
   .cardbody h4{font-family:'Chivo',sans-serif;font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--ink);margin-bottom:6px}
-  .cardbody h4 span{color:var(--brass)}
+  .cardbody h4 span{color:var(--brass-ink)}
   .cardbody p{font-size:14px;color:var(--muted)}
   .reserve-cta{text-align:center;max-width:720px;margin:84px auto 0}
   @media(max-width:820px){.locgrid{grid-template-columns:1fr}.split{grid-template-columns:1fr;gap:28px}}
@@ -99,10 +100,10 @@
 
 <nav>
   <div class="brand">
-    <img src="assets/emblem.svg" alt="Cali Motors emblem">
-    <span class="name">CALI&nbsp;MOTORS</span>
+    <img src="assets/emblem.svg" alt="" class="nav-emblem">
+    <img src="assets/wordmark.png" alt="Cali Motors" class="nav-wordmark">
   </div>
-  <a class="ig" href="#" aria-label="Instagram">@calimotors</a>
+  <span class="ig">@calimotors</span>
 </nav>
 
 <header class="hero">
@@ -113,7 +114,7 @@
     <form class="notify" id="notify">
       <input type="email" required placeholder="Your email — get first access" aria-label="Email">
       <button class="btn" type="submit">Notify Me</button>
-      <div class="ok" id="ok">You're on the list. We'll be in touch.</div>
+      <div class="ok" id="ok" role="status" aria-live="polite">You're on the list. We'll be in touch.</div>
     </form>
   </div>
   <div class="hero-visual" role="img" aria-label="Cali Motors Jumeirah 1"></div>
